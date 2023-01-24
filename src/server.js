@@ -21,11 +21,11 @@ const server = http.createServer((request, response) => {
       email: 'john@doe.com',
     })
 
-    return response.end("Criação de Usuários");
+    return response.writeHead(201).end();
   }
 
   console.table([{"URL": url, "METHOD" : method, "ACTION": "" }]);
-  return response.end("Olá Mundo!");
+  return response.writeHead(404).end();
 })
 
 server.listen(3333);
